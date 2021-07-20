@@ -1,0 +1,54 @@
+<div class="m-3">
+    <h5>books edit : </h5>
+    <form action="" style="width:250px;" #myForm="ngForm">
+        <div>
+            <div style="width:250px;height:250px;border:1px dashed gray;">
+                <img *ngIf="bookEditInfo.photo" style="width:100%;height:100%;" src={{bookEditInfo.photo}} alt="">
+                <img *ngIf="!bookEditInfo.photo" style="width:100%;height:100%;" src="assets/product-placeholder.jpg" alt="">
+            </div>
+            <div>
+                <input type="file" class="form-control" (change)="changePhoto($event)">
+            </div>
+        </div>
+        <div *ngIf="!isState" class="form-group">
+            <label for="">編號</label>
+            <input type="text" name="id" class="form-control" disabled [(ngModel)]="bookEditInfo.id">
+        </div>
+        <div class="form-group">
+            <label for="">書名</label>
+            <input type="text" name="bookName" id="bookName" class="form-control" required [(ngModel)]="bookEditInfo.bookName" #bookName="ngModel">
+            <div style="height:30px;">
+                <p *ngIf="bookName.invalid && (bookName.touched || bookName.dirty)" class="text-danger">BookName is required!!</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">價格</label>
+            <input type="number" name="price" id="price" class="form-control" required [(ngModel)]="bookEditInfo.price" #price="ngModel">
+            <div style="height:30px;">
+                <p *ngIf="price.invalid && (price.touched || price.dirty)" class="text-danger">Price is required!!</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">總類</label>
+            <select name="category" id="category" class="form-select" required [(ngModel)]="bookEditInfo.category" #category="ngModel">
+                <option *ngFor="let item of bookcategory" [ngValue]="item">{{item}}</option>
+            </select>
+            <div style="height:30px;">
+                <p *ngIf="category.invalid && (category.touched || category.dirty)" class="text-danger">category is required!!</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="author">作者</label>
+            <input type="text" name="author" id="author" class="form-control" required [(ngModel)]="bookEditInfo.author" #author="ngModel">
+            <div style="height:30px;">
+                <p *ngIf="author.invalid && (author.touched || author.dirty)" class="text-danger">Author is required!!</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-outline-info m-1" (click)="clearInfo()">Clear</button>
+            <button class="btn btn-outline-secondary m-1" (click)="resetInfo()" [disabled]="isState">Reset</button>
+            <button class="btn btn-outline-primary m-1" (click)="saveInfo()" [disabled]="!myForm.valid">Save</button>
+        </div>
+    </form>
+    <!-- {{ bookEditInfo | json }} -->
+</div>

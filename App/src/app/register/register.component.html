@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="card card-container">
+        <form action="" class="form-register" #registerForm="ngForm">
+            <div class="register-upload-div">
+                <div class="register-img-div">
+                    <img *ngIf="!userRegister.userphoto" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="">
+                    <img *ngIf="userRegister.userphoto" src={{userRegister.userphoto}} alt="">
+                </div>
+                <input type="file" class="form-control" (change)="changePhoto($event)">
+            </div>
+            <div class="d-flex">
+                <div style="margin:0 10px 0 0;width:50%;">
+                    <div class="register-inp">
+                        <input type="text" id="account" name="account" class="form-control" placeholder="Account" required [(ngModel)]="userRegister.account" #account="ngModel">
+                        <div style="height:30px;">
+                            <p *ngIf="account.invalid && (account.touched || account.dirty)" class="text-danger">Account is required!!</p>
+                        </div>
+                    </div>
+                    <div class="register-inp">
+                        <input type="password" id="password" name="password"  class="form-control" placeholder="Password" required [(ngModel)]="userRegister.password" #password="ngModel">
+                        <div style="height:30px;">
+                            <p *ngIf="password.invalid && (password.touched || password.dirty)" class="text-danger">Password is required!!</p>
+                        </div>
+                    </div>
+                    <div class="register-inp">
+                        <input type="text" id="name" name="name"  class="form-control" placeholder="Name" required [(ngModel)]="userRegister.name" #name="ngModel">
+                        <div style="height:30px;">
+                            <p *ngIf="name.invalid && (name.touched || name.dirty)" class="text-danger">Name is required!!</p>
+                        </div>
+                    </div>
+                    <div class="register-inp">
+                        <select name="gender" id="gender" class="form-control" placeholder="Gender" [(ngModel)]="userRegister.gender" #gender="ngModel" required>
+                            <option value="" disabled selected hidden>Gender</option>
+                            <option [ngValue]="item" *ngFor="let item of genderOption">{{item}}</option>
+                        </select>
+                        <div style="height:30px;">
+                            <p *ngIf="gender.invalid && (gender.touched || gender.dirty)" class="text-danger">Gender is required!!</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin:0 0 0 10px;width:50%;">
+                    <div class="register-inp">
+                        <input type="text" id="phone" name="phone"  class="form-control" placeholder="Phone" required [(ngModel)]="userRegister.phone" #phone="ngModel">
+                        <div style="height:30px;">
+                            <p *ngIf="phone.invalid && (phone.touched || phone.dirty)" class="text-danger">Phone is required!!</p>
+                        </div>
+                    </div>
+                    <div class="register-inp">
+                        <input type="text" id="email" name="email"  class="form-control" placeholder="Email" required [(ngModel)]="userRegister.email" #email="ngModel">
+                        <div style="height:30px;">
+                            <p *ngIf="email.invalid && (email.touched || email.dirty)" class="text-danger">Email is required!!</p>
+                        </div>
+                    </div>
+                    <div class="register-inp">
+                        <select name="access" id="access" class="form-control" [(ngModel)]="userRegister.access" #access="ngModel" required>
+                            <option value="" disabled selected hidden>Access</option>
+                            <option value="item" [ngValue]="item" *ngFor="let item of accessOption">{{item}}</option>
+                        </select>
+                        <div style="height:30px;">
+                            <p *ngIf="access.invalid && (access.touched || access.dirty)" class="text-danger">Access is required!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex jusitfy-content-center">
+                <button class="btn-register btn btn-outline-secondary" [disabled]="!registerForm.valid" (click)="createUser()">
+                    <div class="d-flex align-items-center jusifty-content-center" style="position: relative;">
+                        <p>Submit</p>
+                        <i class="bi bi-chevron-right right-icon-btn"></i>
+                        <i class="bi bi-chevron-right right-icon-btn2"></i>
+                        <i class="bi bi-chevron-right right-icon-btn3"></i>
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

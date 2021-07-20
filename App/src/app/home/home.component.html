@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="m-3 d-flex">
+    <div class="card" style="width:400px;height:100vh;">
+        <div class="list-group list-group-flush">
+            <a [routerLink]="[ '/home/bookslist' ]" routerLinkActive="active" class="list-group-item list-group-item-action list-group-item-dark" aria-current="true">
+                書本列表
+            </a>
+            <a [routerLink]="[ '/home/booksdetail' ]" routerLinkActive="active" class="list-group-item list-group-item-action list-group-item-dark" aria-current="true">
+                新增書本
+            </a>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-footer></app-footer>
