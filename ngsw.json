@@ -1,0 +1,89 @@
+{
+  "configVersion": 1,
+  "timestamp": 1631675293057,
+  "index": "/bookstore/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/bookstore/favicon.ico",
+        "/bookstore/index.html",
+        "/bookstore/main.eba62f51cf56755896ac.js",
+        "/bookstore/manifest.webmanifest",
+        "/bookstore/polyfills.4dfc6382c6f45d54f53f.js",
+        "/bookstore/runtime.79076186781d830136aa.js",
+        "/bookstore/styles.1a9467d629924dfecfd0.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/bookstore/assets/forms.less",
+        "/bookstore/assets/icons/icon-128x128.png",
+        "/bookstore/assets/icons/icon-144x144.png",
+        "/bookstore/assets/icons/icon-152x152.png",
+        "/bookstore/assets/icons/icon-192x192.png",
+        "/bookstore/assets/icons/icon-384x384.png",
+        "/bookstore/assets/icons/icon-512x512.png",
+        "/bookstore/assets/icons/icon-72x72.png",
+        "/bookstore/assets/icons/icon-96x96.png",
+        "/bookstore/assets/product-placeholder.jpg",
+        "/bookstore/bootstrap-icons.94eeade15e6b7fbed95b.woff",
+        "/bookstore/bootstrap-icons.dfd0ea122577eb61795f.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/bookstore/assets/forms.less": "134141b92e370311da33e478068d79bfd5030daf",
+    "/bookstore/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/bookstore/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/bookstore/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/bookstore/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/bookstore/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/bookstore/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/bookstore/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/bookstore/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/bookstore/assets/product-placeholder.jpg": "88df9f47e842eee457e6ed55f56694eadaaaffda",
+    "/bookstore/bootstrap-icons.94eeade15e6b7fbed95b.woff": "cbfb7021638656cd7c9159e830cebdf9db059dff",
+    "/bookstore/bootstrap-icons.dfd0ea122577eb61795f.woff2": "4649877868a0068ce50b105d0d2a235e8010c98f",
+    "/bookstore/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/bookstore/index.html": "9b1a78651904a321d232c321a2127951b1d64c8d",
+    "/bookstore/main.eba62f51cf56755896ac.js": "da998eb2ac9d0d260c9b8b204f6d0c8410fc0682",
+    "/bookstore/manifest.webmanifest": "a5d625e7a22fdfbd313e0eaa11bb9571e305d08e",
+    "/bookstore/polyfills.4dfc6382c6f45d54f53f.js": "acc02a37aff1b2a656c3a86dce8612aa86b4176a",
+    "/bookstore/runtime.79076186781d830136aa.js": "fe35a6072724bdbe0be3c6029df7ec63929879df",
+    "/bookstore/styles.1a9467d629924dfecfd0.css": "f3b90de19191f3fd9c19299da2ec7dc4e186a5a3"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
